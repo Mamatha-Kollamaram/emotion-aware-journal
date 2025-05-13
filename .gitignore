@@ -1,0 +1,13 @@
+# Ignore Streamlit secrets
+.streamlit/secrets.toml
+
+# Ignore Python virtual environments
+venv310/
+
+# Ignore Firebase configuration files
+firebase_config.json
+firebase_service_key.json
+
+refined_emotion_model/
+emotrack-model/
+**/__pycache__/

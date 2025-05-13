@@ -1,0 +1,9 @@
+streamlit
+torch
+transformers
+safetensors
+pandas
+altair
+pyrebase4
+firebase-admin
+python-dotenv
