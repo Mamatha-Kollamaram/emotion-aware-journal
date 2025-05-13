@@ -1,4 +1,4 @@
-# Emotion-Aware Journal 🌈🧠
+# Emotion-Aware Journal 
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://your-streamlit-app-url.streamlit.app/)
 ![GitHub License](https://img.shields.io/github/license/Mamatha-Kollamaram/emotion-aware-journal)
@@ -7,19 +7,17 @@ The **Emotion-Aware Journal** is an intelligent web application that helps users
 
 ![App Screenshot](https://via.placeholder.com/800x400?text=Emotion-Aware+Journal+Screenshot) <!-- Replace with actual screenshot -->
 
----
 
-## 🧩 Features
+##  Features
 
-- 🎯 **Advanced Mood Prediction**: Detects up to **28 distinct emotions** from journal entries
-- 🔐 **Secure Cloud Storage**: Firebase for user authentication and storing journal entries
-- 📊 **Interactive Visualizations**: Trend tracking and analytics for emotional patterns
-- 🌍 **Accessible Anywhere**: Responsive design using Streamlit Cloud
-- ⚡ **Real-Time Processing**: Get instant emotion predictions from your text
+-  **Advanced Mood Prediction**: Detects up to **28 distinct emotions** from journal entries
+-  **Secure Cloud Storage**: Firebase for user authentication and storing journal entries
+-  **Interactive Visualizations**: Trend tracking and analytics for emotional patterns
+-  **Accessible Anywhere**: Responsive design using Streamlit Cloud
+-  **Real-Time Processing**: Get instant emotion predictions from your text
 
----
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Component        | Technology |
 |------------------|------------|
@@ -29,16 +27,15 @@ The **Emotion-Aware Journal** is an intelligent web application that helps users
 | ML Framework     | PyTorch |
 | Hosting          | Streamlit Cloud |
 
----
 
-## 🚀 Getting Started
+##  Getting Started
 
-### 📌 Prerequisites
+###  Prerequisites
 - Python 3.8+
 - Firebase Project & credentials
 - Streamlit Account
 
-### 💻 Local Setup
+###  Local Setup
 
 ```bash
 # 1. Clone the repo
@@ -57,38 +54,36 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 🔐 Firebase Setup
+###  Firebase Setup
 
 1. Rename `firebase-config-example.json` → `firebase-config.json`
 2. Add your Firebase Admin SDK credentials.
 
-### ▶️ Run the App
+### ▶ Run the App
 
 ```bash
 streamlit run app.py
 ```
 
----
 
-## ☁️ Deploying to Streamlit Cloud
+##  Deploying to Streamlit Cloud
 
 1. Push your code to GitHub
 2. Create a new app at [Streamlit Cloud](https://streamlit.io/cloud)
 3. Set environment variables for Firebase (via app settings)
 4. Deploy and share!
 
----
 
-## 🤖 Model Details
+##  Model Details
 
 The app uses a **fine-tuned BERT-base-uncased** model trained to classify **28 emotions**, including:
 
-- Joy 😊
-- Anger 😠
-- Sadness 😢
-- Fear 😨
-- Surprise 😲
-- ... *(add complete list of 28 emotions here)*
+- Joy 
+- Anger 
+- Sadness 
+- Fear 
+- Surprise 
+- ... 
 
 ### Current Capabilities
 - Classifies emotion-rich content with high accuracy
@@ -100,9 +95,9 @@ The app uses a **fine-tuned BERT-base-uncased** model trained to classify **28 e
 - Deeper contextual understanding
 - Emotion-based recommendations
 
----
 
-## 🤝 Contributing
+
+##  Contributing
 
 Contributions are welcome! Here's how to get started:
 
@@ -122,21 +117,19 @@ git push origin feature/YourFeature
 
 Feel free to report issues or suggest features via the [Issues Tab](https://github.com/Mamatha-Kollamaram/emotion-aware-journal/issues).
 
----
 
-## 📜 License
+
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
 
----
 
-## 🙌 Acknowledgments
+##  Acknowledgments
 
-- 🤗 [Hugging Face](https://huggingface.co/) for pre-trained NLP models
-- 🧠 [PyTorch](https://pytorch.org/) for model building and inference
-- 🎈 [Streamlit](https://streamlit.io/) for enabling fast web app development
-- 🔥 [Firebase](https://firebase.google.com/) for backend and authentication services
+-  [Hugging Face](https://huggingface.co/) for pre-trained NLP models
+-  [PyTorch](https://pytorch.org/) for model building and inference
+-  [Streamlit](https://streamlit.io/) for enabling fast web app development
+-  [Firebase](https://firebase.google.com/) for backend and authentication services
 
 > Developed with ❤️ by Mamatha Kollamaram
 
----
