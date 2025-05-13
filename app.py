@@ -1,6 +1,6 @@
 import streamlit as st
 import firebase_admin
-from firebase_admin import auth, credentials
+from firebase_admin import auth, credentials, initialize_app
 import pyrebase
 import json
 
@@ -119,11 +119,18 @@ inject_custom_css()
 # ✅ 1. Load pyrebase frontend config from firebase_config.json
 #with open("firebase_config.json") as f:
 #   firebase_config = json.load(f)
+
 firebase_config = json.loads(st.secrets["FIREBASE_CONFIG"])
+
 # ✅ 2. Load Firebase Admin SDK credentials from firebase_service_key.json
-if not firebase_admin._apps:
-    cred = credentials.Certificate("firebase_service_key.json")
-    firebase_admin.initialize_app(cred)
+# if not firebase_admin._apps:
+#     cred = credentials.Certificate("firebase_service_key.json")
+
+#     firebase_admin.initialize_app(cred)
+firebase_service_key = json.loads(st.secrets["FIREBASE_SERVICE_KEY"])
+# Initialize Firebase
+cred = credentials.Certificate(firebase_service_key)
+initialize_app(cred)
 
 # ✅ 3. Initialize Pyrebase (for frontend auth)
 firebase = pyrebase.initialize_app(firebase_config)
