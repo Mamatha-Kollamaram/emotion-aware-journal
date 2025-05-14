@@ -1,78 +1,86 @@
-# Emotion-Aware Journal
+#  Emotion-Aware Journal
 
-## Description
+Emotion-Aware Journal is a personalized journaling web app that uses Natural Language Processing (NLP) to detect emotions from user-written journal entries. The app helps users reflect on their emotions over time and supports emotional awareness and mental well-being.
 
-The **Emotion-Aware Journal** is a web application built using **Streamlit** and **Hugging Face's Transformers**. It allows users to track their emotions over time by predicting their mood based on text input. The system uses a pre-trained emotion detection model to classify the user's emotional state (e.g., happy, sad, neutral, angry) from the text they provide.
+##  Features
 
-## Features
+-  **User Authentication** via Firebase.
+-  **Personalized Journal Entries** stored in Firebase Realtime Database.
+-  **Emotion Detection** using a fine-tuned BERT-based uncased model from Hugging Face Transformers, trained on the **GoEmotions** dataset (Kaggle). It currently identifies **28 different emotions**.
+-  **View Past Entries** along with detected emotions and dates.
+-  **Delete Entries** with a single click.
+-  Built with a focus on **scalability** and future enhancement of the emotion detection model.
 
-- **Mood Prediction:** Users can enter text describing how they feel, and the model predicts their mood based on the input.
-- **Emotion Detection:** The application uses a fine-tuned emotion detection model to predict the user's emotional state (e.g., happy, sad, neutral, angry).
-- **Cloud Hosting:** The app is hosted on Streamlit Cloud, allowing easy access for anyone to use it.
+##  Live Demo
 
-## Technologies Used
+🔗 [Click here to open the app](https://emotion-aware-journal-hync9gisopfqjna6yjnpig.streamlit.app/)
 
-- **Streamlit:** For creating the interactive web interface.
-- **Hugging Face Transformers:** For loading and using pre-trained models for emotion detection.
-- **PyTorch:** For model inference and prediction.
-- **GitHub:** For version control and project hosting.
-- **Streamlit Cloud:** For hosting the application online.
+##  Screenshots
 
-## Setup
+To add screenshots:
+1. Create a `screenshots/` folder in your GitHub repo.
+2. Upload images like `homepage.png`, `journal_entry.png`, etc.
+3. Use markdown to display them:
 
-To run the app locally, follow these steps:
+```markdown
+![Homepage](screenshots/homepage.png)
+![Journal Entry](screenshots/journal_entry.png)
+![Saved Entries](screenshots/saved_entry.png)
+![Mood Graph](screenshots/mood_graph.png)
+```
 
-### Prerequisites
+Place them here in this section for visual reference.
 
-- Python 3.x
-- `pip` package manager
+##  Technologies Used
 
-### Installation
+- [Streamlit](https://streamlit.io/) – Frontend UI
+- [Firebase Authentication](https://firebase.google.com/products/auth) – User login and registration
+- [Firebase Realtime Database](https://firebase.google.com/products/realtime-database) – Entry storage
+- [Hugging Face Transformers](https://huggingface.co/transformers/) – BERT model for emotion classification
+- [GoEmotions Dataset](https://www.kaggle.com/datasets) – Dataset used for training emotion classifier
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Mamatha-Kollamaram/emotion-aware-journal.git
-   cd emotion-aware-journal
-   ```
-2. Set up a virtual environment (optional but recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-   ```
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the Streamlit app:
-   ```bash
-   streamlit run app.py
-   ```
-   
-## Model
+## ⚙ Prerequisites
 
-The app uses the EmoTrack model, hosted on Hugging Face, for emotion classification. The model is loaded dynamically to predict the mood based on user input.
+Make sure you have the following installed:
 
-## Contributing
+- Python 3.8+
+- `pip`
+- Firebase Admin SDK credentials (as `firebase_service_key.json` or stored in Streamlit secrets)
 
-Contributions are welcome! If you would like to improve the app, feel free to fork the repository and submit a pull request. If you find any bugs or issues, please open an issue on GitHub.
+Install dependencies:
 
-## License
+```bash
+pip install -r requirements.txt
+```
 
-This project is licensed under the MIT License.
+## 🗂 Project Structure
 
-## Acknowledgments
+```
+emotion-aware-journal/
+├── app.py
+├── firebase_setup.py
+├── pages/
+│   ├── journal.py
+│   └── login.py
+├── model/
+│   └── emotion_classifier.py
+├── firebase_service_key.json  # or set in secrets
+├── requirements.txt
+└── README.md
+```
 
-***Thanks to Hugging Face for providing the pre-trained models.***
-***Thanks to Streamlit for the simple, easy-to-use interface that makes building web apps fun!***
-   
+##  Security Considerations
 
-This README includes the following sections:
-1. **Project description** to explain the purpose.
-2. **Features** to describe the capabilities of the app.
-3. **Technologies used** to mention the stack.
-4. **Setup instructions** for running the app locally.
-5. **Model** section to explain how the model is used in the app.
-6. **Contributing** to encourage open-source contributions.
-7. **License** to clarify usage rights.
+- Keep your Firebase credentials secure. If deploying on Streamlit Cloud, store them in `st.secrets`.
+- Authentication is handled via Firebase, ensuring secure sign-ins.
 
-You can adapt it to your needs and add any additional information or sections relevant to your project.
+##  License
+
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+##  Contact
+
+For questions or feedback, feel free to open an issue or contact the maintainer:
+
+**Mamatha Kollamaram**  
+[GitHub Profile](https://github.com/Mamatha-Kollamaram)
