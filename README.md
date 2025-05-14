@@ -32,14 +32,18 @@ The app loads this model at runtime using the `transformers` library.
  [Click here to open the app](https://emotion-aware-journal-hync9gisopfqjna6yjnpig.streamlit.app/)
 
 ##  Screenshots
--**Homepage :**
-[Homepage](screenshots/homepage.png)
--**Journal Entry :**
-[Journal Entry](screenshots/journal_entry.png)
--**View Entries :**
-[View Entries](screenshots/view_entries.png)
--**Mood Graph :**
-[Mood Graph](screenshots/mood_graph.png)
+- **Homepage :**
+  
+![Homepage](screenshots/homepage.png)
+- **Journal Entry :**
+  
+![Journal Entry](screenshots/journal_entry.png)
+- **View Entries :**
+  
+![View Entries](screenshots/view_entries.png)
+- **Mood Graph :**
+  
+![Mood Graph](screenshots/mood_graph.png)
 
 
 ##  Technologies Used
