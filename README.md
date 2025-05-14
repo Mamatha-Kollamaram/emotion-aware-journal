@@ -29,15 +29,16 @@ The app loads this model at runtime using the `transformers` library.
 
 ##  Live Demo
 
-🔗 [Click here to open the app](https://emotion-aware-journal-hync9gisopfqjna6yjnpig.streamlit.app/)
+ [Click here to open the app](https://emotion-aware-journal-hync9gisopfqjna6yjnpig.streamlit.app/)
 
 ##  Screenshots
 
 ```markdown
-![Homepage](screenshots/homepage.png)
-![Journal Entry](screenshots/journal_entry.png)
-![View Entries](screenshots/view_entries.png)
-![Mood Graph](screenshots/mood_graph.png)
+
+[Homepage](screenshots/homepage.png)
+[Journal Entry](screenshots/journal_entry.png)
+[View Entries](screenshots/view_entries.png)
+[Mood Graph](screenshots/mood_graph.png)
 ```
 
 ##  Technologies Used
