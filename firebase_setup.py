@@ -1,16 +1,25 @@
 import firebase_admin
-from firebase_admin import credentials, firestore
+from firebase_admin import credentials, firestore, initialize_app
 from datetime import datetime
 from firebase_admin import firestore
 import numpy as np
+import streamlit as st
+import json
 
+# Load credentials from Streamlit secrets
+firebase_service_key = json.loads(st.secrets["FIREBASE_SERVICE_KEY"])
+
+# Initialize Firebase only once
+if not firebase_admin._apps:
+    cred = credentials.Certificate(firebase_service_key)
+    initialize_app(cred)
 
 # Load Firebase credentials from JSON file
-cred = credentials.Certificate("firebase_service_key.json")
+#cred = credentials.Certificate("firebase_service_key.json")
 
 # Initialize Firebase (only if it's not already initialized)
-if not firebase_admin._apps:
-    firebase_admin.initialize_app(cred)
+#if not firebase_admin._apps:
+#    firebase_admin.initialize_app(cred)
 
 # Get Firestore database reference
 db = firestore.client()
